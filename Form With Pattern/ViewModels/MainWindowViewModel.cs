@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -17,12 +18,12 @@ namespace Form_With_Pattern.ViewModels
         {
             SaveCommand = new RelayCommand((c) =>
             {
-               
+                MessageBox.Show("Human added successfully");
             });
 
             JsonCommand = new RelayCommand((c) =>
             {
-               
+                
             });
 
             XmlCommand = new RelayCommand((c) =>

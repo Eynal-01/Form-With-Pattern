@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Form_With_Pattern.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,7 +24,8 @@ namespace Form_With_Pattern
         public MainWindow()
         {
             InitializeComponent();
-            
+            MainWindowViewModel mainWindow = new MainWindowViewModel();
+            this.DataContext=mainWindow;    
         }
     }
 }

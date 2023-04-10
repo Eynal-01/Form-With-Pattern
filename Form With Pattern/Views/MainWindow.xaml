@@ -13,6 +13,7 @@
                 Canvas.Top="20"
                 FontSize="15"
                 Content="Name"
+                Text="{Binding }"
                 ></Label>
             <TextBox
                 Canvas.Left="50"
