@@ -23,6 +23,7 @@ namespace Form_With_Pattern
         public MainWindow()
         {
             InitializeComponent();
+            
         }
     }
 }

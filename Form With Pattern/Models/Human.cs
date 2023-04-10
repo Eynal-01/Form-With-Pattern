@@ -12,5 +12,9 @@ namespace Form_With_Pattern.ViewModels
         public string Surname { get; set; }
         public int Age { get; set; }
         public string Speciality { get; set; }
+        public override string ToString()
+        {
+            return $"{Name} - {Surname} - {Speciality} - {Age}";
+        }
     }
 }

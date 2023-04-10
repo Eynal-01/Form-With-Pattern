@@ -63,7 +63,8 @@
             <RadioButton
                 Canvas.Left="500"
                 Canvas.Top="200"
-                Name="JsonCheckBox"
+                Name="JsonRadioButton"
+                Command="{Binding JsonCommand}"
                 >
             </RadioButton>
             <Label
@@ -75,7 +76,8 @@
             <RadioButton
                 Canvas.Left="500"
                 Canvas.Top="250"
-                Name="XmlCheckBox"
+                Name="XmlradioButton"
+                Command="{Binding XmlCommand}"
                 >
             </RadioButton>
             <Label
@@ -85,6 +87,7 @@
                 Content="Save Xml"
                 ></Label>
             <Button
+                Command="{Binding SaveCommand}"
                 Canvas.Left="150"
                 Canvas.Top="330"
                 Width="90"
