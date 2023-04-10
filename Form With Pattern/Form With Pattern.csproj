@@ -58,7 +58,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="MainWindow.xaml">
+    <Page Include="Views\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -67,7 +67,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Helpers\JsonHelper.cs" />
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="Helpers\XMLHelpers.cs" />
+    <Compile Include="ViewModels\Human.cs" />
+    <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>

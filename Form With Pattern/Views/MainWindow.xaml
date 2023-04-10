@@ -60,30 +60,38 @@
                 FontSize="20"
                 >
             </TextBox>
-            <CheckBox
+            <RadioButton
                 Canvas.Left="500"
                 Canvas.Top="200"
                 Name="JsonCheckBox"
                 >
-            </CheckBox>
+            </RadioButton>
             <Label
                 Canvas.Left="530"
                 Canvas.Top="185"
                 FontSize="20"
                 Content="Save Json"
                 ></Label>
-            <CheckBox
+            <RadioButton
                 Canvas.Left="500"
                 Canvas.Top="250"
                 Name="XmlCheckBox"
                 >
-            </CheckBox>
+            </RadioButton>
             <Label
                 Canvas.Left="530"
                 Canvas.Top="235"
                 FontSize="20"
                 Content="Save Xml"
                 ></Label>
+            <Button
+                Canvas.Left="150"
+                Canvas.Top="330"
+                Width="90"
+                Height="30"
+                FontSize="15"
+                Content="Save"
+                ></Button>
         </Canvas>
     </Grid>
 </Window>
