@@ -13,13 +13,13 @@
                 Canvas.Top="20"
                 FontSize="15"
                 Content="Name"
-                Text="{Binding }"
                 ></Label>
             <TextBox
                 Canvas.Left="50"
                 Canvas.Top="50"
                 Width="300"
                 FontSize="20"
+                Text="{Binding Name}"
                 >
             </TextBox>
             <Label
@@ -33,6 +33,7 @@
                 Canvas.Top="120"
                 Width="300"
                 FontSize="20"
+                Text="{Binding Surname}"
                 >
             </TextBox>
             <Label
@@ -46,6 +47,7 @@
                 Canvas.Top="190"
                 Width="300"
                 FontSize="20"
+                Text="{Binding Age}"
                 >
             </TextBox>
             <Label
@@ -59,6 +61,7 @@
                 Canvas.Top="260"
                 Width="300"
                 FontSize="20"
+                Text="{Binding Speciality}"
                 >
             </TextBox>
             <RadioButton
