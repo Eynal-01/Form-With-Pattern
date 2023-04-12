@@ -14,49 +14,48 @@ namespace Form_With_Pattern.Helpers
 {
     public class FileHelper
     {
-        public static void WriteHumans(List<Human> users)
+        public static void WriteHumans(Human user)
         {
             var serializer = new JsonSerializer();
-
-            using (var sw = new StreamWriter("humans.json"))
+            using (var sw = new StreamWriter($"{user.Name}.json"))
             {
                 using (var jw = new JsonTextWriter(sw))
                 {
                     jw.Formatting = Formatting.Indented;
-                    serializer.Serialize(jw, users);
+                    serializer.Serialize(jw, user);
                 }
             }
         }
-        //public static List<Human> ReadHumans()
-        //{
-        //    List<Human> users = null;
-        //    var serializer = new JsonSerializer();
-        //    using (var sr = new StreamReader("humans.json"))
-        //    {
-        //        using (var jr = new JsonTextReader(sr))
-        //        {
-        //            users = serializer.Deserialize<List<Human>>(jr);
-        //        }
-        //    }
-        //    return users;
-        //}
-        public static void WriteHumansXml(List<Human> Users)
+        public static Human ReadHumans(string filename)
         {
-            XmlSerializer serializer = new XmlSerializer(typeof(List<Human>));
-            using (TextWriter writer = new StreamWriter("humans.xml"))
+            Human users = null;
+            var serializer = new JsonSerializer();
+            using (var sr = new StreamReader($"{filename}.json"))
             {
-                serializer.Serialize(writer, Users);
+                using (var jr = new JsonTextReader(sr))
+                {
+                    users = serializer.Deserialize<Human>(jr);
+                }
+            }
+            return users;
+        }
+        public static void WriteHumansXml(Human user)
+        {
+            XmlSerializer serializer = new XmlSerializer(typeof(Human));
+            using (TextWriter writer = new StreamWriter($"{user.Name}.xml"))
+            {
+                serializer.Serialize(writer, user);
             }
         }
-        //public static List<Human> ReadHumanXml()
-        //{
-        //    List<Human> users = null;
-        //    XmlSerializer serializer = new XmlSerializer(typeof(List<Human>));
-        //    using (TextReader reader = new StreamReader("humans.xml"))
-        //    {
-        //        users = (List<Human>)serializer.Deserialize(reader);
-        //    }
-        //    return users;
-        //}
+        public static Human ReadHumanXml(string filename)
+        {
+            Human users = null;
+            XmlSerializer serializer = new XmlSerializer(typeof(Human));
+            using (TextReader reader = new StreamReader($"{filename}.xml"))
+            {
+                users = (Human)serializer.Deserialize(reader);
+            }
+            return users;
+        }
     }
 }

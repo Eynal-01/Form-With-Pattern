@@ -72,7 +72,6 @@
     <Compile Include="Commands\RelayCommand.cs" />
     <Compile Include="Helpers\JsonHelper.cs" />
     <Compile Include="Models\Human.cs" />
-    <Compile Include="Repositories\HumanRepository.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="Views\MainWindow.xaml.cs">

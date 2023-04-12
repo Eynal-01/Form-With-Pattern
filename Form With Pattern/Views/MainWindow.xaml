@@ -66,39 +66,75 @@
             </TextBox>
             <RadioButton
                 Canvas.Left="500"
-                Canvas.Top="200"
+                Canvas.Top="100"
                 Name="JsonRadioButton"
-                Command="{Binding JsonCommand}"
+                IsChecked="{Binding JsonWriterChecked}"
+                >
+            </RadioButton>
+            <Label
+                Canvas.Left="530"
+                Canvas.Top="85"
+                FontSize="20"
+                Content="Save Json"
+                ></Label>
+            <RadioButton
+                Canvas.Left="500"
+                Canvas.Top="150"
+                Name="XmlradioButton"
+                IsChecked="{Binding XMLWriterChecked}"
+                >
+            </RadioButton>
+            <Label
+                Canvas.Left="530"
+                Canvas.Top="135"
+                FontSize="20"
+                Content="Save XML"
+                ></Label>
+            <RadioButton
+                Canvas.Left="500"
+                Canvas.Top="200"
+                Name="JsonReadradioButton"
+                IsChecked="{Binding JsonReaderChecked}"
                 >
             </RadioButton>
             <Label
                 Canvas.Left="530"
                 Canvas.Top="185"
                 FontSize="20"
-                Content="Save Json"
+                Content="Read from Json"
                 ></Label>
             <RadioButton
                 Canvas.Left="500"
                 Canvas.Top="250"
-                Name="XmlradioButton"
-                Command="{Binding XmlCommand}"
+                Name="XMLReadradioButton"
+                IsChecked="{Binding XMLReaderChecked}"
                 >
             </RadioButton>
             <Label
                 Canvas.Left="530"
                 Canvas.Top="235"
                 FontSize="20"
-                Content="Save Xml"
+                Content="Read from XML"
                 ></Label>
             <Button
                 Command="{Binding SaveCommand}"
-                Canvas.Left="150"
+                Canvas.Left="220"
                 Canvas.Top="330"
                 Width="90"
                 Height="30"
                 FontSize="15"
                 Content="Save"
                 ></Button>
+            <Button
+                Command="{Binding ReadCommand}"
+                Canvas.Left="80"
+                Canvas.Top="330"
+                Width="90"
+                Height="30"
+                FontSize="15"
+                Content="Read" 
+                ></Button>
         </Canvas>
+        
     </Grid>
 </Window>
